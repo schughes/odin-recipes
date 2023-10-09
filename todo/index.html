@@ -1,0 +1,207 @@
+<!-- REFACTOR TO REACT -->
+<!-- https://codepen.io/mrtrimble/pen/RwPazwg -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Odin Recipes</title>
+    <script type="text/javascript" src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="recipe-card">
+      <div id="recipe-card__cover" class="recipe-card__cover">
+        <div class="recipe-card__img">
+          <img
+            src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=687&q=80"
+            alt="blueberry french toast"
+          />
+        </div>
+        <div class="recipe-card__cover-details">
+          <div id="recipe-card__duration" class="recipe-card__duration">
+            <p><span>30</span> mins</p>
+          </div>
+          <div id="recipe-card__servings" class="recipe-card__servings">
+            <p><span>8</span>servings</p>
+          </div>
+          <div id="recipe-card__info" class="recipe-card__info">
+            <div class="recipe-card__title">
+              <h1>Blueberry French Toast</h1>
+            </div>
+            <div class="recipe-card__description">
+              <p>
+                Wonderful blueberry french toast recipe to serve for your whole
+                family!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="recipe-card__content-container"
+        class="recipe-card__content-container"
+      >
+        <div class="recipe-card__actions">
+          <ul>
+            <li>
+              <a id="ingredientsTab" href="#" class="active">Ingredients</a>
+            </li>
+            <li><a id="preparationsTab" href="#">Preparation</a></li>
+          </ul>
+        </div>
+        <div
+          id="recipe-card__content--ingredients"
+          class="recipe-card__content recipe-card__content--active"
+        >
+          <ul>
+            <span>MAIN:</span>
+            <li>12 slices day-old white bread, crusts removed</li>
+            <li>2 packages (8 ounces each) cream cheese</li>
+            <li>1 cup fresh or frozen blueberries</li>
+            <li>12 large eggs, lightly beaten</li>
+            <li>2 cups 2% milk</li>
+            <li>1/3 cup maple syrup or honey</li>
+          </ul>
+          <ul>
+            <span>SAUCE:</span>
+            <li>1 cup sugar</li>
+            <li>2 tablespoons cornstarch</li>
+            <li>1 cup water</li>
+            <li>1 cup fresh or frozen blueberries</li>
+            <li>1 tablespoon butter</li>
+          </ul>
+        </div>
+        <div
+          id="recipe-card__content--preparations"
+          class="recipe-card__content"
+        >
+          <ul class="preparation-steps">
+            <li>
+              Cut bread into 1-in. cubes; place half in a greased 13x9-in.
+              baking dish. Cut cream cheese into 1-in. cubes; place over bread.
+              Top with blueberries and remaining bread cubes.
+            </li>
+
+            <li>
+              Whisk the eggs, milk and syrup in a large bowl. Pour over bread
+              mixture. Cover and refrigerate for 8 hours or overnight.
+            </li>
+
+            <li>
+              Remove from the refrigerator 30 minutes before baking. Cover and
+              bake at 350° for 30 minutes. Uncover; bake 25-30 minutes longer or
+              until a knife inserted in center comes out clean.
+            </li>
+
+            <li>
+              Combine the sugar, water and cornstarch until smooth in a small
+              saucepan. Bring to a boil over medium heat; cook and stir until
+              thickened, 3 minutes. Stir in blueberries; bring to a boil. Reduce
+              heat and simmer until berries burst, 8-10 minutes. Remove from
+              heat; stir in butter. Serve with French toast.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- <div class="recipe-card">
+      <div id="recipe-card__cover" class="recipe-card__cover">
+        <div class="recipe-card__img">
+          <img
+            src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=687&q=80"
+            alt="Blueberry French Toast"
+          />
+        </div>
+        <div class="recipe-card__cover-details">
+          <div id="recipe-card__duration" class="recipe-card__duration">
+            <p><span>30</span>mins</p>
+          </div>
+          <div id="recipe-card__servings" class="recipe-card__servings">
+            <p><span>8</span>servings</p>
+          </div>
+          <div id="recipe-card__info" class="recipe-card__info">
+            <div class="recipe-card__title">
+              <h1>Blueberry French Toast</h1>
+            </div>
+            <div class="recipe-card__description">
+              <p>
+                Wonderful blueberry french toast recipe to serve for your whole
+                family!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="recipe-card__content-container"
+        class="recipe-card__content-container"
+      >
+        <div class="recipe-card__actions">
+          <ul>
+            <li>
+              <a id="ingredientsTab" href="#" class="active">Ingredients</a>
+            </li>
+            <li><a id="preparationsTab" href="#">Preparation</a></li>
+          </ul>
+        </div>
+        <div
+          id="recipe-card__content--ingredients"
+          class="recipe-card__content recipe-card__content--active"
+        >
+          <ul>
+            <span>MAIN:</span>
+            <li>12 slices day-old white bread, crusts removed</li>
+            <li>2 packages (8 ounces each) cream cheese</li>
+            <li>1 cup fresh or frozen blueberries</li>
+            <li>12 large eggs, lightly beaten</li>
+            <li>2 cups 2% milk</li>
+            <li>1/3 cup maple syrup or honey</li>
+          </ul>
+          <ul>
+            <span>SAUCE:</span>
+            <li>1 cup sugar</li>
+            <li>2 tablespoons cornstarch</li>
+            <li>1 cup water</li>
+            <li>1 cup fresh or frozen blueberries</li>
+            <li>1 tablespoon butter</li>
+          </ul>
+        </div>
+        <div
+          id="recipe-card__content--preparations"
+          class="recipe-card__content"
+        >
+          <ul class="preparation-steps">
+            <li>
+              Cut bread into 1-in. cubes; place half in a greased 13x9-in.
+              baking dish. Cut cream cheese into 1-in. cubes; place over bread.
+              Top with blueberries and remaining bread cubes.
+            </li>
+
+            <li>
+              Whisk the eggs, milk and syrup in a large bowl. Pour over bread
+              mixture. Cover and refrigerate for 8 hours or overnight.
+            </li>
+
+            <li>
+              Remove from the refrigerator 30 minutes before baking. Cover and
+              bake at 350° for 30 minutes. Uncover; bake 25-30 minutes longer or
+              until a knife inserted in center comes out clean.
+            </li>
+
+            <li>
+              Combine the sugar, water and cornstarch until smooth in a small
+              saucepan. Bring to a boil over medium heat; cook and stir until
+              thickened, 3 minutes. Stir in blueberries; bring to a boil. Reduce
+              heat and simmer until berries burst, 8-10 minutes. Remove from
+              heat; stir in butter. Serve with French toast.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html> !-->
+</html>
